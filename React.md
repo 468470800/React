@@ -33,21 +33,23 @@
 
       - 进入 cd 项目
 
+      - npm  start  启动项目
+   
         
 
    ###### React  元素渲染
-
+   
    ```js
     let app = <App/>;
     let root = document.getElementById('root');
     let h1 = <h1>Hellwoerld</h1>
-     ReactDOM.render(h1,root);
+  ReactDOM.render(h1,root);
    ```
 
    使用JSX的写法，可以创建JS元素对象
 
    注意: **JSX**元素对象或者组件对象，必须只有一个根元素(根节点)
-
+   
    ```js
    function clock(){//声明一个函数
      let time = new Date().toLocaleTimeString()//声明一个时间转换时间格式
@@ -56,11 +58,11 @@
      ReactDOM.render(element,root)//  React  渲染DOM的方法
    }
    
-   clock()//调用此函数
+clock()//调用此函数
    ```
 
    ###### 渲染DOM
-
+   
    ```js
    function clock(){
        let time = new Date().toLocaleTimeString()//获取当前时间转换成数字形式
@@ -73,11 +75,11 @@
      ReactDOM.render(element,root)//通过这两种形式输出到页面 
    }
    clock()//调用
-   setInterval(clock,1000);//每过一秒增加一秒  计时器
+setInterval(clock,1000);//每过一秒增加一秒  计时器
    ```
 
    ###### 函数 props传值
-
+   
    ```js
    function Clock(props){//函数传值 函数名 传参数props传值
     return(
@@ -96,31 +98,31 @@
    }
    
    setInterval(run,1000)
-   
+
    ```
 
    ###### React  JSX
 
    ###### 优点:
-
+   
    - JSX运行更快，编译为JavaScript代码时进化
-   - 类型更安全，如果出错不能 编译及时编译，及时发现错误。
+- 类型更安全，如果出错不能 编译及时编译，及时发现错误。
    - JSX编写模板更快简洁 
 
    ###### 注意:
-
-   -  JSX必须要有根节点
+   
+-  JSX必须要有根节点
    - 正常的普通HTML元素需要小写，"如果大写会默认为组件"
 
    ##### JSX 表达式
-
+   
    1. 由HTML元素 构成
    2. 中间如果需要插入变量用{}
    3. {}中间可以 使用表达式
    4. {}中间表达式可以使用JSX对象
-   5. 属性和html内容一样都是用{}插入内容
+5. 属性和html内容一样都是用{}插入内容
    6. 一个{}只能放一个表达式
-
+   
    ```js
    import React from 'react';
    import ReactDOM from 'react-dom';
@@ -137,7 +139,7 @@
    ReactDOM.render(//渲染到页面
      element5,//节点名字
      document.getElementById('root');
-   )
+)
    ```
 
    ###### JSX_style  样式
@@ -145,7 +147,7 @@
    1.  Class style 中不可以多个class属性 `<div class='abc' class={'active'}>`错误表示
 
    2. style样式中如果存在多个单词，属性组合第二个单词开始首个字母大写,"遇到长单词必须驼峰命名，或者用 " "包起来  "
-
+   
       ```js
       let exampleStyle = {//声明一个样式对象
            width:"200px",
@@ -163,11 +165,11 @@
       ReactDOM.render(
         element,
         document.getElementById('root')
-      )
+   )
       ```
 
    3. 多个 类共存操作
-
+   
       ```js
       let element3 = (
       	<div>
@@ -179,7 +181,7 @@
       	<div>
           <h2 className={classStr2} style={exampleStyle}>wodewenti</h2>
           </div>
-      )
+   )
       ```
 
    4.  ###### 注释
@@ -189,7 +191,7 @@
    #### React 组件
 
    1. 函数式组件
-
+   
       ```js
       function Childcom(){  				定义一个函数 声明函数名
           let title = <h2>我是一个副标题<h2>       定义一个渲染标题 渲染到 渲染的地方
@@ -210,11 +212,11 @@
       ReactDOM.render(   渲染
       <Childcom/>  
           document.querySelector('#root')
-      )
+   )
       ```
 
       
-
+   
    2. 类组件
 
 ```js
