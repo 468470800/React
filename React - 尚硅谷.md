@@ -60,7 +60,14 @@
 
 ​    **index.js            入口js**
 
+###### 卸载模块包
 
+```txt
+//卸载本地模块
+$ npm uninstall 模块名
+//卸载全局模块
+$ npm uninstall -g 模块名
+```
 
 
 
